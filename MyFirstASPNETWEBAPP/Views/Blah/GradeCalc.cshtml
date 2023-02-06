@@ -1,0 +1,39 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+<!-- Razor Code to Set Header -->
+@{
+    ViewData["Title"] = "Grade Calculator";
+}
+
+<!-- Razor to link to model -->
+@model GradeCalcModel;
+
+<!-- Grade Calculator Form -->
+<h2>Grade Calculator</h2>
+<p>Enter the percentage as a whole integer (ie. for 95% enter 95)</p>
+<form method="post">
+    <label>Assignments (50%)</label>
+    <input type="number" id="atext" asp-for="atext" />
+    <span asp-validation-for="atext" class="text-danger"></span><br />
+    <label>Group Project (10%)</label>
+    <input type="number" id="gtext" asp-for="gtext" />
+    <span asp-validation-for="gtext" class="text-danger"></span><br />
+    <label>Quizzes (10%)</label>
+    <input type="number" id="qtext" asp-for="qtext" />
+    <span asp-validation-for="qtext" class="text-danger"></span><br />
+    <label>Midterm Exam (10%)</label>
+    <input type="number" id="mtext" asp-for="mtext" />
+    <span asp-validation-for="mtext" class="text-danger"></span><br />
+    <label>Final Exam (10%)</label>
+    <input type="number" id="ftext" asp-for="ftext" />
+    <span asp-validation-for="ftext" class="text-danger"></span><br />
+    <label>INTEX (10%)</label>
+    <input type="number" id="itext" asp-for="itext" />
+    <span asp-validation-for="itext" class="text-danger"></span><br /><br />
+    <input id="btnSend" type="submit" value="Input Grades" />
+    <label id="output"> Overall Grade: </label>
+
+</form>
+
+<script src="js/JavaScript.js"></script>
